@@ -1,7 +1,9 @@
 mod median_and_mode;
+mod pig_latin;
 
 use median_and_mode::get_median;
 use median_and_mode::get_mode;
+use pig_latin::to_pig_latin;
 
 fn main() {
     let mut even: Vec<i32> = vec![1,2,3,4,5,6,7,8,9,10];
@@ -12,6 +14,12 @@ fn main() {
 
     println!("Median of list 2 is {}", get_median(&mut odd));
     println!("Mode of list 2  is {}", get_mode(&odd));
+
+    let first: String = String::from("first");
+    let apple: String = String::from("apple");
+
+    assert_eq!(to_pig_latin(first), "irstfay");
+    assert_eq!(to_pig_latin(apple), "applehay");
 }
 
 
