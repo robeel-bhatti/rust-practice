@@ -13,8 +13,6 @@ pub fn get_employees(department: String) -> String {
     res.join(", ").to_string()
 }
 
-
-
 fn init_data() -> HashMap<String, String> {
     let mut empl: HashMap<String, String> = HashMap::new();
     empl.insert("Bob".to_string(), "Engineering".to_string());
